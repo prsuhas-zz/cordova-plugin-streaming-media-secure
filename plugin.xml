@@ -2,8 +2,8 @@
 <plugin
 		xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
-		id="cordova-plugin-streaming-media"
-		version="0.1.4">
+		id="cordova-plugin-streaming-media-xtreme"
+		version="1.0.1">
 
 	<name>StreamingMedia</name>
 
@@ -11,15 +11,15 @@
 		This plugin allows you to launch a fullscreen streaming player for audio or video on iOS and Android.
 	</description>
 
-	<author>Nicholas Hutchind</author>
+	<author>Nicholas smccamley</author>
 
 	<license>MIT</license>
 
 	<keywords>Streaming, Media, Video, Audio, Android, iOS</keywords>
 
-	<repo>https://github.com/nchutchind/Streaming-Media-Cordova-Plugin.git</repo>
+	<repo>https://github.com/smccamley/cordova-plugin-streaming-media.git</repo>
 
-	<issue>https://github.com/nchutchind/Streaming-Media-Cordova-Plugin/issues</issue>
+	<issue>https://github.com/smccamley/cordova-plugin-streaming-media/issues</issue>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
@@ -45,38 +45,38 @@
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="StreamingMedia">
-				<param name="android-package" value="com.hutchind.cordova.plugins.streamingmedia.StreamingMedia" />
+				<param name="android-package" value="com.smccamley.cordova.plugins.streamingmedia.StreamingMedia" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:configChanges="orientation|screenSize" android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
-			<activity android:configChanges="orientation|screenSize" android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleVideoStream" android:label="Simple Video Stream"></activity>
 		</config-file>
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/SimpleAudioStream.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/SimpleVideoStream.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/StreamingMedia.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/ImageLoadTask.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleAudioStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleVideoStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/StreamingMedia.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/ImageLoadTask.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
 	</platform>
 
 	<platform name="amazon-fireos">
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="StreamingMedia">
-				<param name="android-package" value="com.hutchind.cordova.plugins.streamingmedia.StreamingMedia" />
+				<param name="android-package" value="com.smccamley.cordova.plugins.streamingmedia.StreamingMedia" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.INTERNET" />
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:configChanges="orientation|screenSize" android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
-			<activity android:configChanges="orientation|screenSize" android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="com.smccamley.cordova.plugins.streamingmedia.SimpleVideoStream" android:label="Simple Video Stream"></activity>
 		</config-file>
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/SimpleAudioStream.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/SimpleVideoStream.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/StreamingMedia.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
-		<source-file src="src/android/com/hutchind/cordova/plugins/streamingmedia/ImageLoadTask.java" target-dir="src/com/hutchind/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleAudioStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/SimpleVideoStream.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/StreamingMedia.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
+		<source-file src="src/android/com/smccamley/cordova/plugins/streamingmedia/ImageLoadTask.java" target-dir="src/com/smccamley/cordova/plugins/streamingmedia" />
 	</platform>
 </plugin>

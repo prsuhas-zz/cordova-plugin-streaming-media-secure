@@ -1,6 +1,6 @@
 {
-  "name": "cordova-plugin-streaming-media",
-  "version": "1.0.2",
+  "name": "cordova-plugin-streaming-media-xtreme",
+  "version": "1.0.1",
   "description": "This plugin allows you to stream audio and video in a fullscreen, native player on iOS and Android.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nchutchind/Streaming-Media-Cordova-Plugin.git"
+    "url": "git+https://github.com/smccamley/cordova-plugin-streaming-media.git"
   },
   "keywords": [
     "media",
@@ -18,10 +18,10 @@
     "cordova-android",
     "cordova-fireos"
   ],
-  "author": "Nicholas Hutchind",
+  "author": "Nicholas Hutchind & Stuart McCamley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nchutchind/Streaming-Media-Cordova-Plugin/issues"
+    "url": "https://github.com/smccamley/cordova-plugin-streaming-media/issues"
   },
-  "homepage": "https://github.com/nchutchind/Streaming-Media-Cordova-Plugin#readme"
+  "homepage": "https://github.com/smccamley/cordova-plugin-streaming-media#readme"
 }
