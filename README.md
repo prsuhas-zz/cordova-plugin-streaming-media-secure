@@ -1,6 +1,6 @@
 # Cordova Streaming Media plugin
 
-For iOS and Android, by [Nicholas Hutchind & Stuart McCamley](https://github.com/smccamley)
+For iOS and Android, by [Stuart McCamley & Nicholas Hutchind](https://github.com/smccamley)
 
 ## Description
 
@@ -16,15 +16,28 @@ cordova plugin add cordova-plugin-streaming-media-xtreme
 ```
 
 ### iOS specifics
-* Uses the MPMoviePlayerController.
-* Tested on iOS 7, 9
+* Uses the Swift MediaPlayer.
+* Tested on iOS 10.x
 
 ### Android specifics
 * Uses VideoView and MediaPlayer.
 * Creates two activities in your AndroidManifest.xml file.
 * Tested on Android 4.0+
 
-## Usage
+## Usage iOS
+```javascript
+if(window && window.plugins && window.plugins.streamingMedia) {
+  let StreamingMedia = window.plugins.streamingMedia
+  // play streaming video from a remove resource
+  //https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8
+  StreamingMedia.playiOS('url')
+  StreamingMedia.playLocaliOS("local file path")
+}
+
+```
+
+
+## Usage Andoird
 
 ```javascript
   var videoUrl = STREAMING_VIDEO_URL;
