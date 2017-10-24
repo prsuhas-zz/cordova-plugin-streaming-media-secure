@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-streaming-media-xtreme",
-  "version": "1.0.1",
-  "description": "This plugin allows you to stream audio and video in a fullscreen, native player on iOS and Android.",
+  "version": "1.1.1",
+  "description": "This plugin allows you to stream audio and video in a fullscreen, native player on Android.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,6 @@
     "media",
     "streaming",
     "ecosystem:cordova",
-    "cordova-ios",
     "cordova-android",
     "cordova-fireos"
   ],

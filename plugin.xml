@@ -3,19 +3,19 @@
 		xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		id="cordova-plugin-streaming-media-xtreme"
-		version="1.0.1">
+		version="1.1.1">
 
 	<name>StreamingMedia</name>
 
 	<description>
-		This plugin allows you to launch a fullscreen streaming player for audio or video on iOS and Android.
+		This plugin allows you to launch a fullscreen streaming player for audio or video on Android.
 	</description>
 
 	<author>Nicholas smccamley</author>
 
 	<license>MIT</license>
 
-	<keywords>Streaming, Media, Video, Audio, Android, iOS</keywords>
+	<keywords>Streaming, Media, Video, Audio, Android</keywords>
 
 	<repo>https://github.com/smccamley/cordova-plugin-streaming-media.git</repo>
 
@@ -28,18 +28,6 @@
 	<js-module src="www/StreamingMedia.js" name="StreamingMedia">
 		<clobbers target="streamingMedia" />
 	</js-module>
-
-	<!-- ios -->
-	<platform name="ios">
-		<config-file target="config.xml" parent="/*">
-			<feature name="StreamingMedia">
-				<param name="ios-package" value="StreamingMedia" />
-			</feature>
-		</config-file>
-		<header-file src="src/ios/StreamingMedia.h" />
-		<source-file src="src/ios/StreamingMedia.m" />
-		<framework src="MediaPlayer.framework" />
-	</platform>
 
 	<!-- android -->
 	<platform name="android">
