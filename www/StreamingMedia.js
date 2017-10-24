@@ -1,4 +1,9 @@
 "use strict";
+
+var argscheck = require('cordova/argscheck'),
+	utils = require('cordova/utils'),
+	exec = require('cordova/exec');
+
 function StreamingMedia() {
 }
 
@@ -27,6 +32,12 @@ StreamingMedia.prototype.playVideo = function (url, options) {
 	cordova.exec(options.successCallback || null, options.errorCallback || null, "StreamingMedia", "playVideo", [url, options]);
 };
 
+StreamingMedia.playiOS = function(url) {
+	exec(null, null, 'HKVideoPlayer', 'play', [url]);
+};
+StreamingMedia.playLocaliOS = function(url) {
+	exec(null, null, 'HKVideoPlayer', 'playLocal', [url]);
+};
 
 StreamingMedia.install = function () {
 	if (!window.plugins) {
