@@ -32,10 +32,10 @@ StreamingMedia.prototype.playVideo = function (url, options) {
 	cordova.exec(options.successCallback || null, options.errorCallback || null, "StreamingMedia", "playVideo", [url, options]);
 };
 
-StreamingMedia.playiOS = function(url) {
+StreamingMedia.prototype.playiOS = function(url) {
 	exec(null, null, 'HKVideoPlayer', 'play', [url]);
 };
-StreamingMedia.playLocaliOS = function(url) {
+StreamingMedia.prototype.playLocaliOS = function(url) {
 	exec(null, null, 'HKVideoPlayer', 'playLocal', [url]);
 };
 
