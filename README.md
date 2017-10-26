@@ -37,7 +37,7 @@ if(window && window.plugins && window.plugins.streamingMedia) {
 ```
 
 
-## Usage Andoird
+## Usage Android
 
 ```javascript
   var videoUrl = STREAMING_VIDEO_URL;
