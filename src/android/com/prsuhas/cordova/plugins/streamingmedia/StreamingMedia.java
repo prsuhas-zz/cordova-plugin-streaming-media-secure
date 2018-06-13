@@ -1,4 +1,4 @@
-package com.smccamley.cordova.plugins.streamingmedia;
+package com.prsuhas.cordova.plugins.streamingmedia;
 
 import android.app.Activity;
 import android.graphics.Color;

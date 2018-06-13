@@ -1,4 +1,4 @@
-package com.smccamley.cordova.plugins.streamingmedia;
+package com.prsuhas.cordova.plugins.streamingmedia;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -32,18 +32,22 @@ public class SimpleVideoStream extends Activity implements
 	private String mVideoUrl;
 	private Boolean mShouldAutoClose = true;
 	private boolean mControls;
+	private boolean mSecure = true;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		Bundle b = getIntent().getExtras();
 		mVideoUrl = b.getString("mediaUrl");
 		mShouldAutoClose = b.getBoolean("shouldAutoClose");
 		mShouldAutoClose = mShouldAutoClose == null ? true : mShouldAutoClose;
 		mControls = b.getBoolean("controls", true);
+		mSecure = b.getBoolean("secure", true);
+
+		if(mSecure) this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
 
 		RelativeLayout relLayout = new RelativeLayout(this);
 		relLayout.setBackgroundColor(Color.BLACK);
@@ -78,7 +82,11 @@ public class SimpleVideoStream extends Activity implements
 			mVideoView.setOnCompletionListener(this);
 			mVideoView.setOnPreparedListener(this);
 			mVideoView.setOnErrorListener(this);
-			mVideoView.setVideoURI(videoUri);
+			mVideoView.setSecure(mSecure);
+			if(videoUri.startsWith("file://"))
+				mVideoView.setVideoPath(videoUri.getPath());
+			else
+				mVideoView.setVideoURI(videoUri);
 			mMediaController = new MediaController(this);
 			mMediaController.setAnchorView(mVideoView);
 			mMediaController.setMediaPlayer(mVideoView);

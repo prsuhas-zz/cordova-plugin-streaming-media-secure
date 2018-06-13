@@ -1,6 +1,6 @@
-# Cordova Streaming Media plugin
+# Cordova Streaming Media Secure plugin
 
-For iOS and Android, by [Stuart McCamley & Nicholas Hutchind](https://github.com/smccamley)
+For iOS and Android, by [Suhas P R, Stuart McCamley & Nicholas Hutchind](https://github.com/prsuhas)
 
 ## Description
 
@@ -23,6 +23,7 @@ cordova plugin add cordova-plugin-streaming-media-xtreme
 * Uses VideoView and MediaPlayer.
 * Creates two activities in your AndroidManifest.xml file.
 * Tested on Android 4.0+
+* Adds FLAG_SECURE to prevent user from taking screenshot and screen recording
 
 ## Usage iOS
 ```javascript
@@ -56,6 +57,7 @@ if(window && window.plugins && window.plugins.streamingMedia) {
     orientation: 'landscape',
     shouldAutoClose: true,  // true(default)/false
     controls: true // true(default)/false. Used to hide controls on fullscreen
+    secure: true // true(default)/false. Used to prevent user from taking screenshot and screen recording
   };
   window.plugins.streamingMedia.playVideo(videoUrl, options);
 

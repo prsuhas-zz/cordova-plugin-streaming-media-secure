@@ -1,27 +1,28 @@
 {
-  "name": "cordova-plugin-streaming-media-xtreme",
+  "name": "cordova-plugin-streaming-media-secure",
   "version": "2.3.1",
-  "description": "This plugin allows you to stream audio and video in a fullscreen, native player on Android and iOS.",
+  "description": "This plugin allows you to stream audio and secure video in a fullscreen, native player on Android and iOS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smccamley/cordova-plugin-streaming-media.git"
+    "url": "git+https://github.com/prsuhas/cordova-plugin-streaming-media-secure.git"
   },
   "keywords": [
     "media",
     "streaming",
+    "secure",
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios",
     "cordova-fireos"
   ],
-  "author": "Nicholas Hutchind & Stuart McCamley",
+  "author": "Nicholas Hutchind, Stuart McCamley & Suhas P R",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smccamley/cordova-plugin-streaming-media/issues"
+    "url": "https://github.com/prsuhas/cordova-plugin-streaming-media-secure/issues"
   },
-  "homepage": "https://github.com/smccamley/cordova-plugin-streaming-media#readme"
+  "homepage": "https://github.com/prsuhas/cordova-plugin-streaming-media-secure#readme"
 }

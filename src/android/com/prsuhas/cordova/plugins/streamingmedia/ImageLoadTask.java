@@ -1,4 +1,4 @@
-package com.smccamley.cordova.plugins.streamingmedia;
+package com.prsuhas.cordova.plugins.streamingmedia;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
