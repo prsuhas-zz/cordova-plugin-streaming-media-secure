@@ -83,7 +83,7 @@ public class SimpleVideoStream extends Activity implements
 			mVideoView.setOnPreparedListener(this);
 			mVideoView.setOnErrorListener(this);
 			mVideoView.setSecure(mSecure);
-			if(videoUri.startsWith("file://"))
+			if(mVideoUrl.startsWith("file://"))
 				mVideoView.setVideoPath(videoUri.getPath());
 			else
 				mVideoView.setVideoURI(videoUri);
