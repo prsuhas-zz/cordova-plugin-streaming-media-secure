@@ -30,7 +30,6 @@ cordova plugin add cordova-plugin-streaming-media-xtreme
 if(window && window.plugins && window.plugins.streamingMedia) {
   let StreamingMedia = window.plugins.streamingMedia
   // play streaming video from a remove resource
-  //https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8
   StreamingMedia.playiOS('url')
   StreamingMedia.playLocaliOS("local file path")
 }
